@@ -8,11 +8,14 @@ public class SpawnManager : MonoBehaviour
     public GameObject[] animalPrefabs;
     private float spawnRangeX = 20f ;
     private float spawnPosZ = 40f ;
+    private float startDelay = 2.0f ;
+    private float spawnInterval = 1.5f ;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("SpawnRandomAnimal", 2f, 1.5f);
+        InvokeRepeating("SpawnRandomAnimal", startDelay, spawnInterval);
     }
 
     // Update is called once per frame
